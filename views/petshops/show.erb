@@ -1,0 +1,10 @@
+
+
+<h1><%= @petshop.name %></h1>
+<h2>Address: <%= @petshop.address %></h2>
+<h2>Address: <%= @petshop.category %></h2>
+<a href="/petshops/<%= @petshop.id %>/edit">Edit Petshop</a> 
+
+<h3>Pets</h3>
+<%= erb :"pets/index" %>
+<%= erb :"pets/new" %>

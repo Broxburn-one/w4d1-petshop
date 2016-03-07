@@ -1,0 +1,21 @@
+<div class="content">
+
+  <h2>Edit Pets</h2>
+
+  <form action="/pets/<%= @pet.id %>" method="post">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" value="<%= @pet.name %>"><br>
+    
+    <label for="petshop_id">Team:</label>
+    <select id="petshop_id" name="petshop_id">
+      <% @petshops.each do |petshop| %>
+        <option value="<%= petshop.id %>" <% if petshop.id == @pet.petshop_id %> selected="true" <% end %>>
+          <%= petshop.name %>
+        </option>
+      <% end %>
+    </select><br>
+
+    <input type='submit' value="Update Pet">
+  </form>
+
+</div>
