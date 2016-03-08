@@ -26,7 +26,7 @@ class Pet
       '#{ @name }',
       '#{ @petshop_id }',
       '#{ @pet_type },
-      '#{ @pictures }
+      '#{ @picture }
       )"
     Pet.run_sql( sql )
   end

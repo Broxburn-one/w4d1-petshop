@@ -1,0 +1,7 @@
+<h1>Petshops</h1>
+<ul>
+  <% @petshops.each do |petshop| %>
+    <li><a href="/petshops/<%= petshop.id %>"><%= petshop.name %></a> located on <%= petshop.address %></li>
+  <% end %>
+</ul>
+<a href="/petshops/new">Add Team</a>
