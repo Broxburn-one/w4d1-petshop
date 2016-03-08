@@ -11,7 +11,7 @@ class Pet
   end
 
   def petshop()
-    sql = "SELECT * FROM teams WHERE id = #{@petshop_id}"
+    sql = "SELECT * FROM petshops WHERE id = #{@petshop_id}"
     result = Pet.run_sql( sql )
     Petshop.new( result[0] )
   end
