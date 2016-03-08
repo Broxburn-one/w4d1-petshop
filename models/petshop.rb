@@ -19,16 +19,16 @@ def pets()
   end
 
   def save()
-    sql = "INSERT INTO petshops ( 
+    sql = "INSERT INTO petshops (
       name, 
       address,
-      category) 
-      VALUES (
+      category )
+      VALUES ( 
       '#{ @name }',
-      '#{ @address }'
-      '#{ @category }'
-      )"
-    return Petshop.run_sql( sql )
+      '#{ @address }',
+      '#{ @category }' )
+      "
+    Petshop.run_sql( sql )
   end
 
 def self.all()

@@ -3,7 +3,7 @@ require_relative('../models/petshop.rb')
 
 # INDEX
 get '/petshops' do
-  @petshops = Petshops.all()
+  @petshops = Petshop.all()
   erb :"petshops/index"
 end
 
